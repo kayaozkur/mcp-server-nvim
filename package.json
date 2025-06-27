@@ -1,9 +1,9 @@
 {
   "name": "@lepion/mcp-server-nvim",
-  "version": "1.0.1",
+  "version": "1.0.6",
   "description": "Model Context Protocol server for Neovim NvChad configuration management, plugin orchestration, and multi-instance synchronization",
-  "type": "module",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "mcp-server-nvim": "dist/index.js"
   },
@@ -41,7 +41,7 @@
     "url": "https://github.com/kayaozkur/mcp-server-nvim/issues"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.0.3",
+    "@modelcontextprotocol/sdk": "^1.13.0",
     "chokidar": "^3.5.3",
     "execa": "^8.0.0",
     "fs-extra": "^11.0.0",

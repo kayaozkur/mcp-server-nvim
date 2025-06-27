@@ -1,5 +1,6 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import { exec } from 'child_process';
 import { promisify } from 'util';
 
@@ -10,6 +11,7 @@ export class PluginHandler {
   private lazyLockPath: string;
 
   constructor() {
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
     this.templateDir = path.join(__dirname, '../templates');
     this.lazyLockPath = path.join(this.templateDir, 'lazy-lock.json');
   }
