@@ -1,0 +1,22 @@
+{
+  "instances": {
+    "1": {
+      "port": 7777,
+      "role": "coordinator",
+      "status": "active",
+      "current_task": "initializing orchestra"
+    },
+    "2": {
+      "port": 7778,
+      "role": "unassigned",
+      "status": "pending"
+    },
+    "3": {
+      "port": 7779,
+      "role": "unassigned",
+      "status": "pending"
+    }
+  },
+  "tasks": [],
+  "last_sync": "2025-01-24T10:00:00Z"
+}
