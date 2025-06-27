@@ -445,7 +445,7 @@ class NvimMCPServer {
     async run() {
         const transport = new StdioServerTransport();
         await this.server.connect(transport);
-        console.error('MCP Server for Neovim started successfully');
+        // Server started
     }
 }
 // Start the server

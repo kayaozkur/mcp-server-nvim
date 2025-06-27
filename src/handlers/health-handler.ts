@@ -2,6 +2,7 @@ import which from 'which';
 import { execa } from 'execa';
 import * as fs from 'fs/promises';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import * as os from 'os';
 
 interface HealthCheckResult {

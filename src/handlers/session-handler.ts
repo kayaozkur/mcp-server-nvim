@@ -2,6 +2,7 @@ import * as fs from 'fs-extra';
 import * as path from 'path';
 import { exec } from 'child_process';
 import { promisify } from 'util';
+import { fileURLToPath } from 'url';
 
 const execAsync = promisify(exec);
 
@@ -10,6 +11,7 @@ export class SessionHandler {
   private templateDir: string;
 
   constructor() {
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
     this.templateDir = path.join(__dirname, '../templates');
     this.sessionDir = path.join(this.templateDir, 'sessions');
   }

@@ -1,10 +1,12 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 export class KeybindingHandler {
   private templateDir: string;
 
   constructor() {
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
     this.templateDir = path.join(__dirname, '../templates');
   }
 

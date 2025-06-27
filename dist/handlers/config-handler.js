@@ -1,9 +1,11 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import { glob } from 'glob';
 export class ConfigHandler {
     templateDir;
     constructor() {
+        const __dirname = path.dirname(fileURLToPath(import.meta.url));
         this.templateDir = path.join(__dirname, '../templates');
     }
     async getConfig(args) {

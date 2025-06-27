@@ -1,5 +1,6 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
+import { fileURLToPath } from 'url';
 import { exec, spawn } from 'child_process';
 import { promisify } from 'util';
 
@@ -11,6 +12,7 @@ export class OrchestraHandler {
   private templateDir: string;
 
   constructor() {
+    const __dirname = path.dirname(fileURLToPath(import.meta.url));
     this.templateDir = path.join(__dirname, '../templates');
     this.scriptsDir = path.join(__dirname, '../scripts');
     this.orchestraDir = path.join(this.templateDir, 'orchestra');
